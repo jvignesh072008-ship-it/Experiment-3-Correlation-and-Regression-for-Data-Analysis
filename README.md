@@ -23,10 +23,78 @@
 <img width="1143" height="477" alt="image" src="https://github.com/user-attachments/assets/d3d41b8d-bee6-4b5f-a6fe-ef6997126cf2" />
 
 # Program
+Name; Rougith D
+Reg no:25017014
+Slot no:3P1-1
 
-
-
+```
+import numpy as np 
+import math 
+import matplotlib.pyplot as plt 
+ 
+# Input x and y values (space separated), e.g.: 
+# x:  1 2 3 4 5 
+# y:  2 4 3 5 7 
+x = [int(i) for i in input("Enter x values (space separated): ").split()] 
+y = [int(i) for i in input("Enter y values (space separated): ").split()] 
+ 
+if len(x) != len(y): 
+    raise SystemExit("Error: x and y must have the same number of values.") 
+ 
+N = len(x) 
+ 
+# Initialize sums 
+Sx = 0 
+Sy = 0 
+Sxy = 0 
+Sx2 = 0 
+Sy2 = 0 
+ 
+# Compute sums 
+for i in range(N): 
+    Sx += x[i] 
+    Sy += y[i] 
+    Sxy += x[i] * y[i] 
+    Sx2 += x[i]**2 
+    Sy2 += y[i]**2 
+ 
+# Correlation coefficient r 
+den = math.sqrt((N * Sx2 - Sx**2) * (N * Sy2 - Sy**2)) 
+if den == 0: 
+    raise SystemExit("Denominator zero when computing correlation.") 
+r = (N * Sxy - Sx * Sy) / den 
+print("The Correlation coefficient is %0.3f" % r) 
+ 
+# Regression coefficient (slope) of Y on X 
+byx = (N * Sxy - Sx * Sy) / (N * Sx2 - Sx**2) 
+ 
+# Means 
+xmean = Sx / N 
+ymean = Sy / N 
+ 
+print("The Regression line Y on X is ::: y = %0.3f + %0.3f (x-%0.3f)" % (ymean, byx, 
+xmean)) 
+ 
+# Scatter plot of data points 
+plt.scatter(x, y) 
+ 
+# Regression function and plot 
+def Reg(xv): 
+    return ymean + byx * (xv - xmean) 
+ 
+x_plot = np.linspace(min(x), max(x), 51) 
+y_plot = Reg(x_plot) 
+plt.plot(x_plot, y_plot, 'r') 
+ 
+plt.xlabel('x-data') 
+plt.ylabel('y-data') 
+plt.legend(['Regression Line', 'Data points']) 
+plt.grid(True) 
+plt.show()
+````
+https://colab.research.google.com/drive/1-Szfd-jtp9SabY55tLotmtePtCw4rB8o?usp=sharing
 # Output
+<img width="1366" height="645" alt="Screenshot 2025-11-17 140739" src="https://github.com/user-attachments/assets/2b730760-b94c-46b3-bdf9-5fcdde6a53fc" />
 
 
 # Result
