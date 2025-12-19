@@ -19,13 +19,26 @@
 5. The regression line of Y on X is expressed as:  Y = a + bX,  where a is the intercept and b is the regression coefficient (slope).
    
 # Algorithm 
+```
 
-<img width="1143" height="477" alt="image" src="https://github.com/user-attachments/assets/d3d41b8d-bee6-4b5f-a6fe-ef6997126cf2" />
+
+
+
+
+
+
+
+
+
+```
+
 
 # Program
-Name; Rougith D
-Reg no:25017014
-Slot no:3P1-1
+
+Name:Vignesh J
+Reg No:25014705
+Slot Name: 4J3-1
+
 
 ```
 import numpy as np 
@@ -98,7 +111,9 @@ https://colab.research.google.com/drive/1-Szfd-jtp9SabY55tLotmtePtCw4rB8o?usp=sh
 
 
 # Result
-  The correlation and regression for data analysis of objects from feeder using probability distribution are calculated.
+```
+
+```
 
 
 
