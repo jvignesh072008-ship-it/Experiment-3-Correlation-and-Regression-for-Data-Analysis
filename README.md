@@ -104,8 +104,7 @@ plt.ylabel('y-data')
 plt.legend(['Regression Line', 'Data points']) 
 plt.grid(True) 
 plt.show()
-````
-https://colab.research.google.com/drive/1-Szfd-jtp9SabY55tLotmtePtCw4rB8o?usp=sharing
+```
 # Output
 <img width="1366" height="645" alt="Screenshot 2025-11-17 140739" src="https://github.com/user-attachments/assets/2b730760-b94c-46b3-bdf9-5fcdde6a53fc" />
 
